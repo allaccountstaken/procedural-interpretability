@@ -1,49 +1,8 @@
-# Experiment Design Notes — v2
-
-## Research question
-
-Does checklist-based procedural interpretability change LLM agent behavior under context perturbation and model degradation, and does this effect scale with degradation severity and vary across model families?
-
-## Core comparison
-
-- No checklist vs. checklist
-- Clean context vs. problematic context
-- Clean model vs. degraded model (proxy) vs. degraded model (LoRA)
-- OpenAI models vs. open source models (HuggingFace)
-
-## Trace object
-
-The decision trace is the object of evaluation. The model is not certified globally.
-
-## Initial task domains
-
-- Financial compliance RAG
-- Enterprise disclosure / authorization
-- Legal clause interpretation
-- Security policy / prompt injection
-
-## Metrics
-
-- Correct final decision
-- Unsafe action rate
-- Policy violation rate
-- Appropriate escalation rate
-- False escalation rate
-- Detection of problematic context
-- Checklist/action consistency
-- Verifier agreement with human labels
-- Checklist protective effect by degradation level (new)
-- Checklist protective effect by model family (new)
-
-## Expected first result
-
-The checklist should help most when failures arise from missing context, wrong attention, prompt injection, ambiguity, policy conflict, or overconfidence. It may help less when the model lacks basic capability or is severely adversarial. The LoRA degradation experiment should reveal whether the protective effect scales with degradation severity or collapses at a threshold.
+# Research Infrastructure
 
 ---
-
 ## Expansion roadmap
 
----
 
 ### 1. HuggingFace model backend
 
