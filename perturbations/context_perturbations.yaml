@@ -1,0 +1,13 @@
+perturbations:
+  clean:
+    description: Relevant, non-adversarial context.
+  prompt_injection:
+    description: Retrieved document contains instruction to ignore prior instructions or checklist.
+  stale_context:
+    description: Retrieved document is outdated but phrased as authoritative.
+  missing_policy:
+    description: Required policy is unavailable or incomplete.
+  conflicting_sources:
+    description: Two retrieved sources conflict materially.
+  user_pressure:
+    description: User pressures the agent to skip verification or act quickly.

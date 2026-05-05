@@ -1,0 +1,39 @@
+[project]
+name = "procedural-interpretability"
+version = "0.1.0"
+description = "Checklist-based procedural interpretability experiments for AI control"
+requires-python = ">=3.10"
+dependencies = [
+  "openai>=1.0.0",
+  "pydantic>=2.0.0",
+  "python-dotenv>=1.0.0",
+  "pandas>=2.0.0",
+  "numpy>=1.24.0",
+  "pyyaml>=6.0.0",
+  "tqdm>=4.66.0",
+  "jupyter>=1.0.0",
+  "ipykernel>=6.0.0",
+  "matplotlib>=3.8.0",
+  "langchain>=0.3.0",
+  "langchain-openai>=0.2.0",
+  "langgraph>=0.2.0",
+  "chromadb>=0.5.0",
+  "trulens>=1.0.0",
+  "datasets>=2.18.0",
+  "huggingface_hub>=0.24.0",
+  "gradio>=4.0.0",
+  "rich>=13.0.0"
+]
+
+[project.optional-dependencies]
+evals = [
+  "deepeval>=3.0.0",
+  "inspect-ai>=0.3.0",
+  "arize-phoenix>=5.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+pi-run = "procedural_interp.runner:main"

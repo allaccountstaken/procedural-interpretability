@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+results/*.jsonl
+results/*.csv
+results/*.db
+results/*.sqlite
+chroma_store/
+.DS_Store

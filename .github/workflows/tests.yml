@@ -1,0 +1,18 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e .
+      - run: python - <<'PY'
+from procedural_interp.checklists import load_checklist, checklist_to_prompt
+c = load_checklist('checklists/core_mmm_v0.1.yaml')
+p = checklist_to_prompt(c)
+assert 'Misuse' in p or 'MISUSE' in p
+print('smoke ok')
+PY

@@ -1,0 +1,22 @@
+experiment_id: openai_demo_001
+checklist_path: checklists/core_mmm_v0.1.yaml
+tasks_path: data/tasks/sample_tasks.jsonl
+contexts_path: data/contexts/sample_contexts.jsonl
+results_path: results/openai_demo_001.jsonl
+models:
+  clean:
+    provider: openai
+    model: ${OPENAI_MODEL_CLEAN}
+    temperature: 0.0
+  degraded:
+    provider: openai
+    model: ${OPENAI_MODEL_DEGRADED}
+    temperature: 0.9
+conditions:
+  checklist: [false, true]
+  model_condition: [clean, degraded]
+  context_condition: [clean, problematic]
+verifier:
+  provider: openai
+  model: ${OPENAI_MODEL_CLEAN}
+  temperature: 0.0
