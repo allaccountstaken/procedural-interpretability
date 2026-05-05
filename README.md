@@ -6,7 +6,7 @@ Core hypothesis:
 
 > Checklist-based procedural interpretability may improve bounded decision reliability by converting implicit human expectations into explicit runtime controls and verifiable decision traces.
 
-The checklist does **not** certify the model. It certifies the **decision trace**.
+The checklist does **not** certify the model. It certifies the **decision trace**. Read more abount this on <a href="https://medium.com/@dmik/procedural-interpretability-checklists-for-ai-control-1f0e813b9095">Medium </a>
 
 ## Experiment matrix
 
